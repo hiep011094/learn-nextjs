@@ -1,0 +1,17 @@
+//! ---> global > font
+
+// @font-face {
+//     font-family: 'Noto Sans JP';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-display: optional;
+//     src: url('/fonts/NotoSansCJKjp-Medium.woff2') format('woff2');
+//     src: url('/fonts/NotoSansCJKjp-Medium.ttf') format('truetype');
+// }
+
+$f_base: "Noto Sans JP",
+sans-serif;
+$f_primary: "Noto Sans JP",
+sans-serif;
+$f_secondary: "Noto Sans JP",
+serif;

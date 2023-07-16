@@ -1,0 +1,26 @@
+@use 'sass:math';
+
+//! ---> fonts (font-family, font-size, font-weight, line height, leterspacing)
+@mixin fonts($family: "", $size, $weight : 0, $line, $spacing : 0, $color: "", $notsize: 0) {
+    @if($family !="") {
+        font-family: $family;
+    }
+
+    @if($notsize !=0) {
+        font-size: #{$size * 0.1rem};
+    }
+
+    @if($weight !=0) {
+        font-weight: $weight;
+    }
+
+    line-height: math.div($line, $size);
+
+    @if($spacing !=0) {
+        letter-spacing: #{$spacing * 0.001em};
+    }
+
+    @if($color !="") {
+        color: $color;
+    }
+}

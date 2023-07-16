@@ -1,0 +1,389 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* =====================
+  commonに格上げ
+===================== */
+
+/*パンクズ
+--------------------*/
+.p_contact {
+    padding: 99px 0 0 0;
+}
+
+.p_contact .news_ttl {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.p_contact .txt {
+    font-weight: 500;
+    text-align: center;
+}
+
+.p_contact .txt a {
+    color: #0165be;
+    text-decoration: underline;
+    word-break: break-word;
+    transition: 0.5s;
+    text-underline-position: under;
+}
+
+.p_contact .txt a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    background: #eef1f9;
+    width: 100%;
+    height: 40px;
+}
+
+.breadcrumbs>ul>li {
+    position: relative;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #333;
+    padding-left: 35px;
+    line-height: 40px;
+}
+
+.breadcrumbs>ul>li::before {
+    position: absolute;
+    top: 0%;
+    left: 8%;
+    content: "\003e";
+    font-size: 1.4rem;
+}
+
+.breadcrumbs>ul>li:first-child {
+    padding-left: 20px;
+}
+
+.breadcrumbs>ul>li:first-child::before {
+    content: '';
+}
+
+.breadcrumbs>ul>li>a {
+    color: #002560;
+}
+
+.contact-wrap label {
+    cursor: pointer;
+}
+
+/*下層ページタイトル
+--------------------*/
+.under-page-title {
+    margin: 50px 0 45px;
+    font-size: 4.0rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #002560;
+}
+
+/* =====================
+  contact-wrap
+===================== */
+
+.contact-wrap p {
+    margin-bottom: 70px;
+}
+
+.contact-wrap span.blue {
+    color: #fff;
+    background-color: #5877c2;
+    padding: 3px 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    float: right;
+}
+
+.contact-wrap dl {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.contact-wrap dl.bt {
+    border-top: 1px solid #ccc;
+}
+
+.contact-wrap dt {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    vertical-align: top;
+    margin-top: 8px;
+    margin-right: 5%;
+    font-weight: 700;
+}
+
+.contact-wrap dt lavel {
+    margin: 0;
+}
+
+.contact-wrap dd {
+    float: left;
+    width: 70%;
+}
+
+.contact-wrap dd .input-area {
+    padding: 6.5px 5px;
+    width: 100%;
+    border: 1px solid #999;
+    resize: none;
+    outline: none;
+}
+
+.contact-wrap dd.zip .input-area {
+    width: 30%;
+}
+
+.mwform-checkbox-field input,
+.mwform-radio-field input {
+    margin-right: 10px !important;
+    margin-top: -3px;
+}
+
+.mwform-radio-field span {
+    font-weight: bold;
+}
+
+.submit-wrap {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn:nth-child(2) {
+    margin-left: 20px;
+}
+
+.thanks {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.check {}
+
+.error {}
+
+.require {
+    display: inline-block;
+    appearance: auto;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.contact-wrap .btn {
+    position: relative;
+    color: #fff !important;
+    background-color: #002560;
+    padding: 18px 30px;
+    max-width: 220px;
+    width: 100%;
+    text-align: left;
+    border: 2px solid transparent;
+    transition: 0.3s ease-in-out;
+    opacity: 1 !important;
+    cursor: pointer;
+    -webkit-appearance: button;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.5s;
+    display: block;
+}
+
+.contact-wrap .btn:hover {
+    color: #002560 !important;
+    background-color: #fff;
+    border: 2px solid #002560;
+}
+
+.addtoany_content {
+    display: none;
+}
+
+.submit-wrap>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.submit-wrap>div .btn {
+    margin: 10px;
+}
+
+.contact-wrap dd .postalcode {
+    display: inline-block;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.contact-wrap dd .bt_zip {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    cursor: pointer;
+    background: #002560;
+    color: #fff;
+    padding: 6px 20px;
+    border: 2px solid transparent;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.contact-wrap dd .bt_zip:hover {
+    background: #fff;
+    color: #002560;
+    border: 2px solid #002560;
+}
+
+.contact-wrap .blue.blue-1 {
+    background: #999;
+}
+
+/* ====================================================================================
+         SP時
+  ==================================================================================== */
+@media screen and (max-width: 768px) {
+
+    /* =====================
+	  commonに格上げ
+	===================== */
+    .p_contact {
+        padding: 50px 0 0 0;
+    }
+
+    .p_contact .news_ttl {
+        margin-bottom: 20px;
+    }
+
+    .p_contact .txt {
+        text-align: left;
+    }
+
+    /*パンクズ
+	--------------------*/
+    .breadcrumbs {
+        background: #eef1f9;
+        width: 100%;
+        height: auto;
+    }
+
+    .breadcrumbs>ul>li {
+        display: inline-block;
+        font-size: 1.4rem;
+        color: #333;
+        padding-left: 25px;
+        line-height: 25px;
+    }
+
+    .breadcrumbs>ul>li::before {
+        top: 0%;
+        left: 5%;
+        font-size: 1.2rem;
+    }
+
+    .breadcrumbs>ul>li:first-child {
+        padding-left: 0;
+    }
+
+    /*下層ページタイトル
+	--------------------*/
+    .under-page-title {
+        margin: 30px 0 20px;
+        font-size: 2.2rem;
+    }
+
+    /* =====================
+	  contact-wrap
+	===================== */
+    .contact-wrap .btn {
+        padding: 10px 20px;
+        max-width: 160px;
+    }
+
+    .contact-wrap p {
+        margin: 0px 0 30px 0;
+    }
+
+    .contact-wrap span.blue {
+        font-size: 1.2rem;
+    }
+
+    .contact-wrap dl {
+        padding: 20px 20px;
+    }
+
+    .contact-wrap dt {
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 0;
+
+    }
+
+    .contact-wrap dd {
+        float: none;
+        width: 100%;
+    }
+
+    .contact-wrap dd .input-area {
+        padding: 2px;
+    }
+
+    .contact-wrap dd.zip .input-area {
+        width: 60%;
+    }
+
+    .mwform-checkbox-field input,
+    .mwform-radio-field input {
+        margin-top: -4px;
+    }
+
+    .mwform-radio-field {
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .submit-wrap {
+        margin: 40px 0;
+    }
+
+    .btn:nth-child(2) {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .contact-wrap dd .postalcode {
+        width: calc(100% - 94px);
+        max-width: 201px;
+    }
+
+    .contact-wrap dd .bt_zip {
+        top: 1px;
+        padding: 3px 10px;
+        border: 1px solid transparent;
+        font-size: 12px;
+    }
+
+    .contact-wrap dd .bt_zip:hover {
+        border: 1px solid #002560;
+    }
+
+}
+
+/*  SP // */

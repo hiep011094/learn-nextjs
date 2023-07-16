@@ -1,112 +1,92 @@
-import Image from 'next/image'
+import "@/public/assets/scss/top.scss"
+import Link from "next/link"
+
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: '進化するごみ袋 | サステナブルなリサイクルの最新トピックを提供',
+  description: "進化するごみ袋 | サステナブルなリサイクルの最新トピックを提供",
+  openGraph: {
+    title: '進化するごみ袋 | サステナブルなリサイクルの最新トピックを提供',
+    description: '進化するごみ袋 | サステナブルなリサイクルの最新トピックを提供'
+  }
+}
 
 export default function Home() {
+
+  const dataTag: any = [...Array(5)]
+
+  const dataPost: any = [...Array(15)]
+
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <article className="main_article">
+        <div className="container">
+          <div className="main_article_wrap">
+            <figure className="main_article_image" data-aos="fade-up" data-aos-delay="200">
+              <img src="/assets/images/top/img_article_1.png" alt="タイトルテキストタイトルテキストタイトルテキストタイトルテキスト" />
+            </figure>
+            <div className="main_article_content" data-aos="fade-up" data-aos-delay="200">
+              <p className="time">
+                <span className="tag">カテゴリ</span>
+                <span className="date">2023.00.00</span>
+              </p>
+
+              <h3 className="title">タイトルテキストタイトルテキストタイトルテキストタイトルテキスト</h3>
+              <p className="txt">
+                本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト...
+              </p>
+
+              <div className="cates">
+                <Link href="#" className="nav_link">タグ</Link>
+                <Link href="#" className="nav_link">タグ</Link>
+                <Link href="#" className="nav_link">タグタグタグ</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div className="tag_lists_block" data-aos="fade-up" data-aos-delay="200">
+        <div className="tag_lists_block_container">
+          <h3 className="tag_lists_block_title">
+            <span className="txt">タグ一覧</span>
+          </h3>
+          <div className="tag_lists">
+            {
+              dataTag.map((i: number) => <Link key={i} href="/archive/tag/slug" className="nav_link">#タグ</Link>)
+            }
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="news">
+        <div className="container">
+          <p className="news_ttl" data-aos="fade-up" data-aos-delay="200">最新の記事</p>
+          <div className="news_content" data-aos="fade-up" data-aos-delay="200">
+            {
+              dataPost.map((i: number) =>
+                <Link key={i} href="/archive/single" className="news_item">
+                  <div className="img">
+                    <img src="/assets/images/news/img_news.jpg" alt="タイトルテキストタイトルテキストタイトルテキストタイトルテキスト"
+                    />
+                  </div>
+                  <p className="quote">
+                    <span className="pos">カテゴリ</span>
+                    <span className="date">2023.00.00</span>
+                  </p>
+                  <p className="name">タイトルテキストタイトルテキストタイトルテキストタイトルテキスト</p>
+                  <p className="txt">本文テキスト冒頭の30文字が入ります冒頭の30文字が入ります...</p>
+                  <div className="list_tag">
+                    <p className="tag">タグ</p>
+                    <p className="tag">タグ</p>
+                    <p className="tag">タグタグタグ</p>
+                  </div>
+                </Link>
+              )
+            }
+          </div>
+          <Link href="#" className="news_btn" data-aos="fade-up" data-aos-delay="200">記事一覧へ</Link>
+        </div>
       </div>
     </main>
   )

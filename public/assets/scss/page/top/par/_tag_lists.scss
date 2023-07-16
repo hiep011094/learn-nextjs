@@ -1,0 +1,86 @@
+@use "../../../global"as g;
+
+.tag_lists {
+    &_block {
+        margin-bottom: 30px;
+
+        &_container {
+            padding: 20px;
+            border-top: 1px solid #CCC;
+            border-bottom: 1px solid #CCC;
+        }
+
+        &_title {
+            @include g.fonts('', 14, 500, 20, 0, #333, 1);
+            margin-bottom: 20px;
+        }
+
+    }
+
+    // .nav_link {
+    //     @include g.fonts('', 14, 500, 20, 0, #333, 1);
+    //     display: inline-block;
+    //     padding: 5px 16px;
+    //     margin-left: 10px;
+    //     margin-right: 10px;
+    // }
+
+    @include g.screen('md') {
+        width: calc(100% - 220px);
+        padding-left: 43px;
+
+        &_block {
+            margin-bottom: 60px;
+
+            &_container {
+                display: flex;
+
+                padding-top: 16px;
+                padding-bottom: 14px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 1px;
+                    left: 240px;
+                    background-color: #CCC;
+                }
+            }
+
+            &_title {
+                width: 220px;
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+
+        // .nav_link {
+        //     margin-left: 20px;
+        //     margin-right: 20px;
+        //     border-radius: 20px;
+        //     transition: 300ms ease-in-out;
+
+        //     &:hover {
+        //         color: #fff;
+        //         background-color: #002560;
+        //     }
+        // }
+    }
+
+    @include g.screen('lg') {
+        &_block {
+
+            &_container {
+                padding-left: 0;
+                padding-right: 0;
+
+                &::after {
+                    left: 220px;
+                }
+            }
+        }
+    }
+}

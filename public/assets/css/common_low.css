@@ -1,0 +1,317 @@
+@charset "UTF-8";
+.header_breadcrumb {
+  position: relative;
+  background: #EEF1F9;
+  z-index: -2;
+}
+
+.breadcrumb {
+  padding: 10px 0;
+}
+@media only screen and (min-width: 768px) {
+  .breadcrumb {
+    display: flex;
+  }
+}
+.breadcrumb li {
+  position: relative;
+  display: inline;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  margin-right: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .breadcrumb li {
+    margin-right: 30px;
+  }
+}
+.breadcrumb li a {
+  color: #002560;
+  padding-right: 25px;
+  transition: 0.5s;
+}
+@media only screen and (min-width: 768px) {
+  .breadcrumb li a {
+    padding-right: 45px;
+  }
+}
+.breadcrumb li a:hover {
+  opacity: 0.8;
+}
+.breadcrumb li span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.breadcrumb li span::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: "＞";
+  color: #333333;
+  transform: translateY(-50%);
+  filter: alpha(opacity=100);
+}
+
+.tag_lists .nav_link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  color: #333;
+  display: inline-block;
+  padding: 5px 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .tag_lists {
+    width: calc(100% - 220px);
+    padding-left: 43px;
+  }
+  .tag_lists_block_container {
+    position: relative;
+    display: flex;
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
+  .tag_lists_block_container::after {
+    position: absolute;
+    top: 0;
+    left: 240px;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #CCC;
+  }
+  .tag_lists_block_title {
+    display: flex;
+    width: 220px;
+    text-align: center;
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .tag_lists .nav_link {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    transition: 300ms ease-in-out;
+  }
+  .tag_lists .nav_link:hover {
+    color: #fff;
+    background-color: #002560;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .tag_lists_block_container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tag_lists_block_container::after {
+    left: 220px;
+  }
+}
+.tag_lists_block_container {
+  padding: 20px;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+.tag_lists_block_title {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  color: #333;
+}
+@media only screen and (min-width: 768px) {
+  .tag_lists_block_title {
+    margin-bottom: 0px;
+  }
+}
+.tag_lists_block_title::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #CCC;
+}
+@media only screen and (min-width: 768px) {
+  .tag_lists_block_title::after {
+    display: none;
+  }
+}
+.tag_lists .nav_link {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  color: #333;
+}
+.tag_lists .nav_link:first-child {
+  margin-left: 0;
+  margin-right: 10px;
+  padding: 4px 10px 4px 0px;
+}
+@media only screen and (min-width: 768px) {
+  .tag_lists .nav_link:first-child {
+    margin-left: 10px;
+    padding: 4px 10px 4px 10px;
+  }
+}
+
+.news_ttl {
+  font-size: 2.2rem;
+  color: #002560;
+  font-weight: 700;
+  line-height: 1.4666666667;
+}
+@media only screen and (min-width: 768px) {
+  .news_ttl {
+    font-size: 3rem;
+  }
+}
+.news_content {
+  display: grid;
+  padding-top: 40px;
+  width: 100%;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+@media only screen and (min-width: 768px) {
+  .news_content {
+    padding-top: 60px;
+    gap: 60px 40px;
+  }
+}
+.news_item {
+  width: 100%;
+  transition: 0.5s;
+  color: #333333;
+}
+.news_item:hover {
+  opacity: 0.7;
+}
+.news_item:hover img {
+  transform: scale(1.1);
+}
+.news_item .img {
+  width: 100%;
+  overflow: hidden;
+}
+.news_item .img img {
+  transition: 0.5s;
+}
+.news_item .quote {
+  padding-top: 16px;
+  font-weight: 700;
+}
+.news_item .quote .pos {
+  position: relative;
+  padding-right: 27px;
+}
+.news_item .quote .pos::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: "";
+  transform: translateY(-50%);
+  width: 2px;
+  height: 15px;
+  background-color: #333333;
+}
+.news_item .quote .date {
+  padding-left: 17px;
+  font-size: 1.2rem;
+  line-height: 1.4285714286;
+}
+@media only screen and (min-width: 768px) {
+  .news_item .quote .date {
+    font-size: 1.4rem;
+  }
+}
+.news_item .name {
+  padding-top: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+@media only screen and (min-width: 768px) {
+  .news_item .name {
+    font-size: 2rem;
+  }
+}
+.news_item .txt {
+  padding-top: 10px;
+}
+.news_item .txt,
+.news_item .tag {
+  font-size: 1.2rem;
+  line-height: 1.4285714286;
+  font-weight: 500;
+}
+@media only screen and (min-width: 768px) {
+  .news_item .txt,
+.news_item .tag {
+    font-size: 1.4rem;
+  }
+}
+
+.list_tag {
+  padding-top: 24px;
+}
+.list_tag .tag {
+  display: inline-block;
+  margin: 4px 2px;
+  padding: 2px 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333333;
+  background: #EEF1F9;
+  border-radius: 16px;
+  transition: 0.5s;
+}
+@media only screen and (min-width: 768px) {
+  .list_tag .tag {
+    margin: 0 5px 10px 0;
+    transition: 300ms ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .p_newsdetail .tag:hover {
+    color: #fff;
+    background-color: #002560;
+  }
+}
+
+.news_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 240px;
+  height: 60px;
+  margin: 60px auto 0;
+  font-weight: 500;
+  color: #002560;
+  background-color: #EEF1F9;
+  transition: 0.3s;
+}
+@media only screen and (min-width: 768px) {
+  .news_btn {
+    margin: 160px auto 0;
+  }
+}
+.news_btn:hover {
+  color: #EEF1F9;
+  background-color: #002560;
+}
+
+/*# sourceMappingURL=common_low.css.map */

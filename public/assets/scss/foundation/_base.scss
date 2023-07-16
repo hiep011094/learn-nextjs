@@ -1,0 +1,68 @@
+@use "../global/"as g;
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: rgba($color: #FFF, $alpha: .15);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background-color: g.$c_primary;
+}
+
+::-moz-selection {
+    background-color: #eee;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #eee;
+    text-shadow: none;
+}
+
+html {
+    line-height: 1.6;
+}
+
+body {
+    font-size: 1.4rem;
+    color: g.$c_text;
+    font-family: g.$f_primary;
+
+    @include g.screen('md') {
+        font-size: 1.6rem;
+    }
+}
+
+figure {
+    img {
+        display: block;
+    }
+}
+
+#wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include g.screen('md') {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.nav_link {
+    @include g.screen('md') {
+        transition: 150ms ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

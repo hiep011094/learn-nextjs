@@ -1,0 +1,8 @@
+@use 'sass:math';
+
+$screen_origin: 1920;
+
+@function vw($val, $width: $screen_origin) {
+    $ret: math.div($val, $width) * 100vw;
+    @return #{$ret};
+}
